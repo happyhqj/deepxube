@@ -1,7 +1,11 @@
 from abc import ABC, abstractmethod
-from typing import List, Tuple, Optional, Set, TypeVar, Generic, Dict, Any
+from typing import TYPE_CHECKING, List, Tuple, Optional, Set, TypeVar, Generic, Dict, Any
 import numpy as np
-from clingo.solving import Model as ModelCl
+
+if TYPE_CHECKING:
+    from clingo.solving import Model as ModelCl
+else:
+    ModelCl = Any
 
 from deepxube.logic.logic_objects import Atom, Model
 from deepxube.utils import misc_utils

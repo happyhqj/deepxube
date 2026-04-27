@@ -1,6 +1,11 @@
 __version__ = "0.2.1"
 __author__ = 'Forest Agostinelli'
 
+import os
+import tempfile
+
+os.environ.setdefault("MPLCONFIGDIR", os.path.join(tempfile.gettempdir(), "deepxube-matplotlib"))
+
 # run registers
 from . import domains  # noqa: F401
 from . import heuristics  # noqa: F401

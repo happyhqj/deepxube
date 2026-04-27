@@ -3,7 +3,6 @@ from dataclasses import dataclass
 from typing import Generic, TypeVar, List, Dict, Tuple, cast, Optional, Union
 
 import torch
-from torch.utils.tensorboard import SummaryWriter
 import torch.nn as nn
 from torch.nn import DataParallel
 from torch.optim import Optimizer
@@ -16,6 +15,7 @@ from deepxube.nnet.nnet_utils import nnet_in_out_shared_q
 from deepxube.utils.data_utils import get_nowait_noerr
 from deepxube.nnet import nnet_utils
 from deepxube.utils.timing_utils import Times
+from deepxube.utils.tensorboard_utils import SummaryWriter
 
 from multiprocessing import Queue
 import numpy as np

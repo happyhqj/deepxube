@@ -11,7 +11,7 @@ authors = [
 ]
 requires-python = ">= 3.10"
 dependencies = ['torch>=2.0', 'numpy == 2.*', 'matplotlib', 'clingo', 'wget', 'filelock', 'pillow', 'types-Pillow', 'imageio', 'tensorboard']
-license = {file = "LICENSE.txt"}
+license = {file = "LICENSE"}
 readme = "README.md"
 
 keywords = ["DeepXube", "DeepCubeA", "DeepCube", "deep learning", "reinforcement learning", "search", "heuristic search", "pathfinding", "planning", "Rubik's Cube", "Sliding Tile Puzzle", "Sokoban"]

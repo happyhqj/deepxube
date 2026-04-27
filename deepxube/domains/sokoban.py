@@ -14,7 +14,6 @@ import pickle
 import pathlib
 import tarfile
 import os
-import wget  # type: ignore
 from filelock import FileLock
 
 
@@ -144,6 +143,11 @@ class Sokoban(ActsEnumFixed[SkState, SkAction, SkGoal], StartGoalWalkable[SkStat
                 user_in: str = input(f"Sokoban data needs to be downloaded from {data_download_link}. "
                                      f"Download data (about 16MB)? (y/n):")
                 if user_in.upper() == "Y":
+                    try:
+                        import wget  # type: ignore
+                    except ModuleNotFoundError as exc:
+                        raise ModuleNotFoundError("wget is required to download Sokoban data. Install it with `python3 -m pip install wget`.") from exc
+
                     valid_user_in = True
                     print("Downloading compressed data")
                     if not os.path.exists(data_dir):

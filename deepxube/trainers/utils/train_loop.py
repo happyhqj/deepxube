@@ -13,8 +13,7 @@ from deepxube.trainers.train_policy import TrainPolicy
 from deepxube.utils.command_line_utils import get_pathfind_from_arg, get_pathfind_name_kwargs
 from deepxube.nnet import nnet_utils
 from deepxube.utils import data_utils
-
-from torch.utils.tensorboard import SummaryWriter
+from deepxube.utils.tensorboard_utils import SummaryWriter
 
 import sys
 import os
